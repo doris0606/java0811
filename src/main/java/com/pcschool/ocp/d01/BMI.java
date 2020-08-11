@@ -6,11 +6,15 @@ public class BMI {
     public String name;
     public double h;
     public double w;
-    public double bmi;
-    
-    public double calcBMI() {
-        bmi = w / Math.pow(h/100, 2);
+    private double bmi;
+  
+    public double getBMI() {
         return bmi;
+    }
+    
+    
+    public void setBMI() {
+        bmi = w / Math.pow(h/100, 2);     
     }
     
 }

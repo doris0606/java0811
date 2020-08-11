@@ -3,6 +3,7 @@ package com.pcschool.ocp.d01;
 public class Account {
     
    private int balance;
+    int getMoney;  
    //存款
    public void save(int money) {
        if(money > 0) {
@@ -17,6 +18,6 @@ public class Account {
    }
    
 //
-public int getBalance() {
+   public int getBalance() {
     return balance;
-}
+   }

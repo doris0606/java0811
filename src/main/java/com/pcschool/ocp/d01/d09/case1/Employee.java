@@ -16,7 +16,17 @@ public class Employee {
     
     class Study{
        public void read() {
-           System.out.println("進修");
+           String appName = "美食 App";
+           int hours = 60;
+           System.out.println("進修時間:" + hours + " H");
+           
+           class App {
+               public void printname() {
+                   System.out.println(appName);
+               }  
+           }
+           App app = new App();
+           app.printname();
        }
     }
     

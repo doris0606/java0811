@@ -21,7 +21,10 @@ public class SetDemo3 {
         }
         System.out.println(sum);
         
-        sum = set.stream();
+        sum = set.stream().mapToInt(note -> note.intValue()).sum();
+        System.out.println(sum);
+        sum = set.stream().mapToInt(note -> note).sum();
+        System.out.println(sum);
     }
     
 }

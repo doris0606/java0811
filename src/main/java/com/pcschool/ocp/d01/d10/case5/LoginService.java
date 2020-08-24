@@ -3,7 +3,7 @@ package com.pcschool.ocp.d01.d10.case5;
 import java.util.Optional;
 
 public class LoginService {
-    public boolean login(String username, String password) {
+    public boolean login(String username, String password) throws LoginException {
         
         User optUser = UserDB.getINstance().getUser(username);
         if(optUser.isPresent()) {
@@ -11,10 +11,12 @@ public class LoginService {
             if(user.getPassword().equals(password)) {
                 return true;
             } else {
-                return false;
+                LoginException e = new LoginException("密碼錯誤");
+                throw e;
             } 
         } else {
-            return false;
+            LoginException e = new LoginException("密碼錯誤");
+                throw e;
         }
     }
 }
